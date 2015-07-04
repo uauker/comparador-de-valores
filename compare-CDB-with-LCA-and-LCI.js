@@ -56,15 +56,15 @@ function taxaToNumber(text) {
 		text = text.replace(',', '.');
 		text = text.replace('%', '');
 		text = text.replace(CDI, '');
-
-		text = text.trim();
 	}
 
-	if (text == "") {
+	text = text.trim();
+
+	if (text === "") {
 		text = "100";
 	}
 
-	return text;
+	return parseFloat(text);
 }
 
 function diffDateInDays(text) {
@@ -92,7 +92,7 @@ function irFromVencimento(vencimento) {
 }
 
 function calcComparateToLCIandLCA(rendimento, vencimento) {
-	var percentual = parseFloat(rendimento); // 110
+	var percentual = taxaToNumber(rendimento); // 110
 	var ir = irFromVencimento(vencimento); // 17.5
 
 	ir = ir/100;
