@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Comparador",
+    "version": "1.0",
+ 
+    "description": "Comparador de CDB com LCA/LCI",
+
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "declarativeContent"
+    ],
+ 
+    "content_scripts": [ {
+        "js": [ "jquery-2.1.4.min.js", "compare-CDB-with-LCA-and-LCI.js" ],
+        "css": [ ],
+        "matches": [ "https://portal.xpi.com.br/pages/renda-fixa/renda-fixa.aspx" ]
+    } ]
+}
