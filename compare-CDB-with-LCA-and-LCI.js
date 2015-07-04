@@ -37,7 +37,7 @@ cdbTable.forEach(function(entry) {
 		var appendText = "<td></td>";
 
 		if (!isNaN(comparatedValue)) {
-			appendText = "<td> LCI/LCA (" + comparatedValue + ") </td>";
+			appendText = "<td> LCI/LCA " + comparatedValue + " </td>";
 		}
 
 		element.append(appendText);
