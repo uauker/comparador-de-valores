@@ -35,9 +35,14 @@ cdbTable.forEach(function(entry) {
 		var comparatedValue = calcComparateToLCIandLCA(taxa, vencimento);
 
 		var appendText = "<td></td>";
+		var taxaText = "";
+
+		if (taxa.indexOf(CDI) > -1) {
+			var taxaText = CDI;
+		}
 
 		if (!isNaN(comparatedValue)) {
-			appendText = "<td> LCI/LCA " + comparatedValue + "% </td>";
+			appendText = "<td>" + comparatedValue + "% " + taxaText + "</td>";
 		}
 
 		element.append(appendText);
